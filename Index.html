@@ -58,6 +58,26 @@
       max-height: 40px; margin: 0.5rem 1rem; opacity: 0.8;
     }
 
+    /* New Certified & Trusted Experts Section Styles */
+    .certified-section {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: #e6f0ff;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    .certified-section h2 {
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #0047ab;
+    }
+    .certified-badge {
+      max-width: 120px;
+      margin: 0 auto;
+      display: block;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+    }
+
     .faq-item {
       margin-bottom: 1rem;
       border-bottom: 1px solid #ddd;
@@ -134,28 +154,6 @@
       height: 40px;
       margin-bottom: 1rem;
     }
-
-    /* Certified & Trusted Experts Section */
-    .certified-section {
-      background: white;
-      padding: 3rem 2rem;
-      max-width: 1000px;
-      margin: 2rem auto;
-      text-align: center;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
-    }
-    .certified-section h2 {
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      color: #0f62fe;
-      font-size: 2rem;
-    }
-    .certified-section img {
-      max-width: 150px;
-      height: auto;
-      opacity: 0.85;
-    }
   </style>
 </head>
 <body>
@@ -198,6 +196,12 @@
     </div>
   </section>
 
+  <!-- New Certified & Trusted Experts Section -->
+  <section class="certified-section">
+    <h2>Certified & Trusted Experts</h2>
+    <img src="https://i.imgur.com/vn8Xc61.png" alt="Certified & Trusted Experts Badge" class="certified-badge" />
+  </section>
+
   <section class="section">
     <h2>Frequently Asked Questions</h2>
     <div class="faq-item">
@@ -237,12 +241,6 @@
       <textarea rows="5" placeholder="Describe your case..." required></textarea>
       <button type="submit">Submit</button>
     </form>
-  </section>
-
-  <!-- Certified & Trusted Experts Section -->
-  <section class="certified-section">
-    <h2>Certified & Trusted Experts</h2>
-    <img src="https://i.imgur.com/v1wsGB7.jpeg" alt="Certified & Trusted Experts Badge" />
   </section>
 
   <footer>
