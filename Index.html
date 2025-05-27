@@ -20,6 +20,7 @@
     header nav a {
       color: white; text-decoration: none;
       margin-left: 1rem; font-weight: 600;
+      cursor: pointer;
     }
     .hero {
       background: url('https://i.imgur.com/xuRPrKG.jpeg') no-repeat center center/cover;
@@ -58,24 +59,21 @@
       max-height: 40px; margin: 0.5rem 1rem; opacity: 0.8;
     }
 
-    /* New Certified & Trusted Experts Section Styles */
-    .certified-section {
+    .certified-experts {
       text-align: center;
-      padding: 3rem 2rem;
-      background: #e6f0ff;
+      padding: 2rem 1rem;
+      background: #e0f0ff;
+      margin-bottom: 1rem;
       border-radius: 8px;
-      margin-bottom: 1rem;
     }
-    .certified-section h2 {
+    .certified-experts img {
+      max-width: 160px;
+      height: auto;
+    }
+    .certified-experts h3 {
+      margin-top: 1rem;
       font-weight: 700;
-      margin-bottom: 1rem;
-      color: #0047ab;
-    }
-    .certified-badge {
-      max-width: 120px;
-      margin: 0 auto;
-      display: block;
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+      color: #0f62fe;
     }
 
     .faq-item {
@@ -154,25 +152,68 @@
       height: 40px;
       margin-bottom: 1rem;
     }
+    footer a.team-link {
+      color: #0f62fe;
+      cursor: pointer;
+      text-decoration: underline;
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.7);
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .modal-content {
+      background: white;
+      border-radius: 8px;
+      max-width: 600px;
+      margin: auto;
+      padding: 1rem;
+      position: relative;
+      text-align: center;
+    }
+    .modal-content img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .modal-close {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.75rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #555;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
   <header>
     <img src="https://i.imgur.com/icNCu9P.png" class="logo" alt="Crypto Asset Recovery" />
     <nav>
-      <a href="#">Home</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
+      <a id="nav-home" href="#">Home</a>
+      <a id="nav-services" href="#what-we-do">Services</a>
+      <a id="nav-contact" href="#contact">Contact</a>
     </nav>
   </header>
 
   <section class="hero">
     <h1>Crypto Asset Recovery</h1>
     <p>Recover your lost or stolen crypto funds from scams and fraudulent investments.</p>
-    <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">Get Help Now</button>
+    <button id="btn-get-help">Get Help Now</button>
   </section>
 
-  <section class="section">
+  <section id="what-we-do" class="section">
     <h2>What We Do</h2>
     <p>We specialize in helping victims of cryptocurrency scams and fraudulent investment platforms track and recover lost funds. Our expert team utilizes legal tools, blockchain analysis, and international resources to support recovery efforts quickly and securely.</p>
   </section>
@@ -196,10 +237,10 @@
     </div>
   </section>
 
-  <!-- New Certified & Trusted Experts Section -->
-  <section class="certified-section">
-    <h2>Certified & Trusted Experts</h2>
-    <img src="https://i.imgur.com/vn8Xc61.png" alt="Certified & Trusted Experts Badge" class="certified-badge" />
+  <!-- Certified & Trusted Experts Badge Section -->
+  <section class="certified-experts">
+    <h3>Certified & Trusted Experts</h3>
+    <img src="https://i.imgur.com/vn8Xc61.png" alt="Certified & Trusted Experts Badge" />
   </section>
 
   <section class="section">
@@ -247,7 +288,17 @@
     <img src="https://i.imgur.com/icNCu9P.png" alt="Crypto Asset Recovery logo" />
     <p>&copy; 2025 Crypto Asset Recovery. All rights reserved.</p>
     <p>Privacy Policy | Terms & Conditions</p>
+    <a class="team-link" id="open-team-modal">Meet the Team</a>
   </footer>
+
+  <!-- Team Modal -->
+  <div id="team-modal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" id="close-team-modal">&times;</span>
+      <h2>Our Expert Team</h2>
+      <img src="https://i.imgur.com/v1wsGB7.jpeg" alt="Team Experts Group Photo" />
+    </div>
+  </div>
 
   <script>
     // FAQ Toggle
@@ -274,6 +325,30 @@
     }
     rotateTestimonial();
     setInterval(rotateTestimonial, 5000);
+
+    // Smooth scroll for nav links and buttons
+    document.getElementById('nav-services').addEventListener('click', e => {
+      e.preventDefault();
+      document.getElementById('what-we-do').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.getElementById('btn-get-help').addEventListener('click', () => {
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Modal open/close logic for team photo
+    const teamModal = document.getElementById('team-modal');
+    document.getElementById('open-team-modal').addEventListener('click', () => {
+      teamModal.style.display = 'flex';
+    });
+    document.getElementById('close-team-modal').addEventListener('click', () => {
+      teamModal.style.display = 'none';
+    });
+    window.addEventListener('click', e => {
+      if(e.target === teamModal) {
+        teamModal.style.display = 'none';
+      }
+    });
   </script>
 </body>
 </html>
