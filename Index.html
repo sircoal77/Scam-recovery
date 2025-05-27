@@ -1,23 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Crypto Asset Recovery - Recover funds from crypto scams and fraudulent investment platforms with expert support.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Crypto Asset Recovery - Recover funds from crypto scams and fraudulent investment platforms with expert support."/>
   <title>Crypto Asset Recovery | Recover Funds from Crypto Scams</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-    body {
-      line-height: 1.6;
-      color: #222;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+    body { line-height: 1.6; color: #222; background: #f9f9f9; }
     header {
       background: #000;
       padding: 1rem 2rem;
@@ -25,57 +16,37 @@
       align-items: center;
       justify-content: space-between;
     }
-    header img.logo {
-      height: 50px;
-      border-radius: 12px;
-    }
+    header img.logo { height: 50px; border-radius: 12px; }
     header nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 1rem;
-      font-weight: 600;
+      color: white; text-decoration: none;
+      margin-left: 1rem; font-weight: 600;
     }
     .hero {
       background: url('https://i.imgur.com/xuRPrKG.jpeg') no-repeat center center/cover;
-      color: white;
-      text-align: center;
-      padding: 6rem 2rem;
-      position: relative;
+      color: white; text-align: center; padding: 6rem 2rem; position: relative;
     }
     .hero::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
+      content: ""; position: absolute; top: 0; left: 0;
       width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 0;
+      background: rgba(0, 0, 0, 0.5); z-index: 0;
     }
-    .hero h1, .hero p {
-      position: relative;
-      z-index: 1;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
+    .hero h1, .hero p { position: relative; z-index: 1; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
     .hero button {
-      background: #0f62fe;
-      border: none;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      border-radius: 5px;
-      cursor: pointer;
+      background: #0f62fe; border: none; color: white;
+      padding: 0.75rem 1.5rem; font-size: 1rem;
+      border-radius: 5px; cursor: pointer;
     }
+
     .section {
       padding: 4rem 2rem;
       max-width: 1000px;
       margin: auto;
+      background: white;
+      margin-bottom: 1rem;
     }
+
     .trusted-brands {
       display: flex;
       justify-content: space-around;
@@ -84,34 +55,57 @@
       flex-wrap: wrap;
     }
     .trusted-brands img {
-      max-height: 40px;
-      margin: 0.5rem 1rem;
-      opacity: 0.8;
+      max-height: 40px; margin: 0.5rem 1rem; opacity: 0.8;
     }
+
+    .faq-item {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #ddd;
+      cursor: pointer;
+    }
+    .faq-question {
+      font-weight: 600;
+      padding: 0.5rem;
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      padding: 0 0.5rem;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 200px;
+      padding-top: 0.5rem;
+    }
+
+    .case-studies {
+      background: #eef3fd;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+    }
+
     .testimonials {
       background: url('https://i.imgur.com/xuRPrKG.jpeg') no-repeat center center/cover;
-      color: white;
-      padding: 4rem 2rem;
-      text-align: center;
+      color: white; padding: 4rem 2rem; text-align: center;
       position: relative;
     }
     .testimonials::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
+      content: ""; position: absolute; top: 0; left: 0;
       width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: 0;
+      background: rgba(0, 0, 0, 0.6); z-index: 0;
     }
     .testimonials > div {
-      position: relative;
-      z-index: 1;
+      position: relative; z-index: 1;
+      max-width: 800px; margin: auto;
     }
     .testimonial {
-      margin: 2rem auto;
-      max-width: 700px;
       font-style: italic;
+      font-size: 1.2rem;
+      min-height: 120px;
+      transition: opacity 0.5s ease;
     }
+
     form {
       display: flex;
       flex-direction: column;
@@ -125,13 +119,11 @@
     }
     form button {
       background: #0f62fe;
-      border: none;
-      color: white;
-      padding: 0.75rem;
-      border-radius: 4px;
-      font-size: 1rem;
-      cursor: pointer;
+      border: none; color: white;
+      padding: 0.75rem; border-radius: 4px;
+      font-size: 1rem; cursor: pointer;
     }
+
     footer {
       background: #111;
       color: white;
@@ -146,7 +138,7 @@
 </head>
 <body>
   <header>
-    <img src="https://i.imgur.com/icNCu9P.png" class="logo" alt="Crypto Asset Recovery">
+    <img src="https://i.imgur.com/icNCu9P.png" class="logo" alt="Crypto Asset Recovery" />
     <nav>
       <a href="#">Home</a>
       <a href="#services">Services</a>
@@ -159,17 +151,6 @@
     <p>Recover your lost or stolen crypto funds from scams and fraudulent investments.</p>
     <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">Get Help Now</button>
   </section>
-
-  <section class="section">
-    <h2>Trusted by Clients & Featured In</h2>
-    <div class="trusted-brands">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Trustpilot_logo.png" alt="Trustpilot">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/BBC_logo.png" alt="BBC">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Yahoo_Finance_Logo_2019.png" alt="Yahoo Finance">
-    </div>
-  </section>
-
-  <!-- New Sections Start Here -->
 
   <section class="section">
     <h2>What We Do</h2>
@@ -187,41 +168,86 @@
   </section>
 
   <section class="section">
-    <h2>Frequently Asked Questions</h2>
-    <h4>How long does recovery take?</h4>
-    <p>It depends on your case complexity, but most recoveries take 2–6 weeks on average.</p>
-    
-    <h4>Do I have to pay upfront?</h4>
-    <p>No. We operate on a success-based model. You only pay when funds are recovered.</p>
-    
-    <h4>What scams do you handle?</h4>
-    <p>We focus on crypto scams, investment frauds, fake exchanges, and phishing attacks.</p>
+    <h2>Trusted by Clients & Featured In</h2>
+    <div class="trusted-brands">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Trustpilot_logo.png" alt="Trustpilot" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/BBC_logo.png" alt="BBC" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Yahoo_Finance_Logo_2019.png" alt="Yahoo Finance" />
+    </div>
   </section>
 
-  <!-- New Sections End Here -->
+  <section class="section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-question">How long does recovery take?</div>
+      <div class="faq-answer">It depends on your case complexity, but most recoveries take 2–6 weeks on average.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Do I have to pay upfront?</div>
+      <div class="faq-answer">No. We operate on a success-based model. You only pay when funds are recovered.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">What scams do you handle?</div>
+      <div class="faq-answer">We focus on crypto scams, investment frauds, fake exchanges, and phishing attacks.</div>
+    </div>
+  </section>
+
+  <section class="section case-studies">
+    <h2>Recent Case Highlights</h2>
+    <ul>
+      <li><strong>Robert T.</strong> – $370,000 recovered from a fraudulent ICO platform.</li>
+      <li><strong>Linda P.</strong> – $61,000 restored after loss to a fake brokerage site.</li>
+    </ul>
+  </section>
 
   <section class="testimonials">
     <div>
       <h2>What Our Clients Say</h2>
-      <p class="testimonial">"Thanks to Crypto Asset Recovery, I got back over $12,000 I thought was gone forever. Quick and professional!" – Sarah M.</p>
-      <p class="testimonial">"Their team was responsive, supportive, and truly effective. Highly recommend them." – James K.</p>
+      <p class="testimonial" id="testimonial-text"></p>
     </div>
   </section>
 
   <section id="contact" class="section">
     <h2>Free Case Evaluation</h2>
     <form>
-      <input type="text" placeholder="Full Name" required>
-      <input type="email" placeholder="Email Address" required>
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required />
       <textarea rows="5" placeholder="Describe your case..." required></textarea>
       <button type="submit">Submit</button>
     </form>
   </section>
 
   <footer>
-    <img src="https://i.imgur.com/icNCu9P.png" alt="Crypto Asset Recovery logo">
+    <img src="https://i.imgur.com/icNCu9P.png" alt="Crypto Asset Recovery logo" />
     <p>&copy; 2025 Crypto Asset Recovery. All rights reserved.</p>
     <p>Privacy Policy | Terms & Conditions</p>
   </footer>
+
+  <script>
+    // FAQ Toggle
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => item.classList.toggle('open'));
+    });
+
+    // Testimonial Carousel
+    const testimonials = [
+      '"Thanks to Crypto Asset Recovery, I got back over $12,000 I thought was gone forever. Quick and professional!" – Sarah M.',
+      '"Their team was responsive, supportive, and truly effective. Highly recommend them." – James K.',
+      '"I was scammed out of $370,000 in a fake ICO. These guys actually got it back. Incredible." – Robert T.',
+      '"After months of trying, they helped me recover $61,000 lost to a fake broker site. Game-changing service!" – Linda P.'
+    ];
+    let index = 0;
+    const testimonialEl = document.getElementById('testimonial-text');
+    function rotateTestimonial() {
+      testimonialEl.style.opacity = 0;
+      setTimeout(() => {
+        testimonialEl.textContent = testimonials[index];
+        testimonialEl.style.opacity = 1;
+        index = (index + 1) % testimonials.length;
+      }, 300);
+    }
+    rotateTestimonial();
+    setInterval(rotateTestimonial, 5000);
+  </script>
 </body>
 </html>
