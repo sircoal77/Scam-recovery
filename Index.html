@@ -39,6 +39,7 @@
       padding: 0.75rem 1.5rem; font-size: 1rem;
       border-radius: 5px; cursor: pointer;
     }
+
     .section {
       padding: 4rem 2rem;
       max-width: 1000px;
@@ -46,6 +47,7 @@
       background: white;
       margin-bottom: 1rem;
     }
+
     .trusted-brands {
       display: flex;
       justify-content: space-around;
@@ -56,6 +58,7 @@
     .trusted-brands img {
       max-height: 40px; margin: 0.5rem 1rem; opacity: 0.8;
     }
+
     .certified-experts {
       text-align: center;
       padding: 2rem 1rem;
@@ -72,6 +75,7 @@
       font-weight: 700;
       color: #0f62fe;
     }
+
     .faq-item {
       margin-bottom: 1rem;
       border-bottom: 1px solid #ddd;
@@ -91,12 +95,14 @@
       max-height: 200px;
       padding-top: 0.5rem;
     }
+
     .case-studies {
       background: #eef3fd;
       padding: 2rem;
       margin-bottom: 2rem;
       border-radius: 8px;
     }
+
     .testimonials {
       background: url('https://i.imgur.com/xuRPrKG.jpeg') no-repeat center center/cover;
       color: white; padding: 4rem 2rem; text-align: center;
@@ -117,6 +123,7 @@
       min-height: 120px;
       transition: opacity 0.5s ease;
     }
+
     form {
       display: flex;
       flex-direction: column;
@@ -134,6 +141,7 @@
       padding: 0.75rem; border-radius: 4px;
       font-size: 1rem; cursor: pointer;
     }
+
     footer {
       background: #111;
       color: white;
@@ -151,6 +159,8 @@
       display: inline-block;
       margin-top: 0.5rem;
     }
+
+    /* Modal Styles */
     .modal {
       display: none;
       position: fixed;
@@ -188,51 +198,157 @@
   </style>
 </head>
 <body>
+  <header>
+    <img src="https://i.imgur.com/icNCu9P.png" class="logo" alt="Crypto Asset Recovery" />
+    <nav>
+      <a id="nav-home" href="#">Home</a>
+      <a id="nav-services" href="#what-we-do">Services</a>
+      <a id="nav-contact" href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<header>
-  <img src="https://i.imgur.com/icNCu9P.png" class="logo" alt="Crypto Asset Recovery" />
-  <nav>
-    <a id="nav-home" href="#">Home</a>
-    <a id="nav-services" href="#what-we-do">Services</a>
-    <a id="nav-contact" href="#contact">Contact</a>
-  </nav>
-</header>
+  <section class="hero">
+    <h1>Crypto Asset Recovery</h1>
+    <p>Recover your lost or stolen crypto funds from scams and fraudulent investments.</p>
+    <button id="btn-get-help">Get Help Now</button>
+  </section>
 
-<section class="hero">
-  <h1>Crypto Asset Recovery</h1>
-  <p>Recover your lost or stolen crypto funds from scams and fraudulent investments.</p>
-  <button id="btn-get-help">Get Help Now</button>
-</section>
+  <section id="what-we-do" class="section">
+    <h2>What We Do</h2>
+    <p>We specialize in helping victims of cryptocurrency scams and fraudulent investment platforms track and recover lost funds. Our expert team utilizes legal tools, blockchain analysis, and international resources to support recovery efforts quickly and securely.</p>
+  </section>
 
-<section id="what-we-do" class="section">
-  <h2>What We Do</h2>
-  <p>We specialize in helping victims of cryptocurrency scams and fraudulent investment platforms track and recover lost funds. Our expert team utilizes legal tools, blockchain analysis, and international resources to support recovery efforts quickly and securely.</p>
-</section>
+  <section class="section">
+    <h2>Why Choose Us</h2>
+    <ul style="list-style: disc; padding-left: 2rem;">
+      <li>No upfront fees – we only succeed when you do</li>
+      <li>Specialized expertise in crypto fraud investigation</li>
+      <li>Secure, confidential, and legally backed recovery process</li>
+      <li>Responsive support and dedicated case managers</li>
+    </ul>
+  </section>
 
-<section class="section">
-  <h2>Why Choose Us</h2>
-  <ul style="list-style: disc; padding-left: 2rem;">
-    <li>No upfront fees – we only succeed when you do</li>
-    <li>Specialized expertise in crypto fraud investigation</li>
-    <li>Secure, confidential, and legally backed recovery process</li>
-    <li>Responsive support and dedicated case managers</li>
-  </ul>
-</section>
+  <section class="section">
+    <h2>Trusted by Clients & Featured In</h2>
+    <div class="trusted-brands">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Trustpilot_logo.png" alt="Trustpilot" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/BBC_logo.png" alt="BBC" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Yahoo_Finance_Logo_2019.png" alt="Yahoo Finance" />
+    </div>
+  </section>
 
-<section class="section">
-  <h2>Trusted by Clients & Featured In</h2>
-  <div class="trusted-brands">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Trustpilot_logo.png" alt="Trustpilot" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/BBC_logo.png" alt="BBC" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Yahoo_Finance_Logo_2019.png" alt="Yahoo Finance" />
+  <!-- Certified & Trusted Experts Badge Section -->
+  <section class="certified-experts">
+    <h3>Certified & Trusted Experts</h3>
+    <img src="https://i.imgur.com/vn8Xc61.png" alt="Certified & Trusted Experts Badge" />
+  </section>
+
+  <section class="section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-question">How long does recovery take?</div>
+      <div class="faq-answer">It depends on your case complexity, but most recoveries take 2–6 weeks on average.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Do I have to pay upfront?</div>
+      <div class="faq-answer">No. We operate on a success-based model. You only pay when funds are recovered.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">What scams do you handle?</div>
+      <div class="faq-answer">We focus on crypto scams, investment frauds, fake exchanges, and phishing attacks.</div>
+    </div>
+  </section>
+
+  <section class="section case-studies">
+    <h2>Recent Case Highlights</h2>
+    <ul>
+      <li><strong>Robert T.</strong> – $370,000 recovered from a fraudulent ICO platform.</li>
+      <li><strong>Linda P.</strong> – $61,000 restored after loss to a fake brokerage site.</li>
+    </ul>
+  </section>
+
+  <section class="testimonials">
+    <div>
+      <h2>What Our Clients Say</h2>
+      <p class="testimonial" id="testimonial-text"></p>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Free Case Evaluation</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <textarea rows="5" placeholder="Describe your case..." required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <img src="https://i.imgur.com/icNCu9P.png" alt="Crypto Asset Recovery logo" />
+    <p>&copy; 2025 Crypto Asset Recovery. All rights reserved.</p>
+    <p>Privacy Policy | Terms & Conditions</p>
+    <a class="team-link" id="open-team-modal">Meet the Team</a>
+  </footer>
+
+  <!-- Team Modal -->
+  <div id="team-modal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" id="close-team-modal">&times;</span>
+      <h2>Our Expert Team</h2>
+      <img src="https://i.imgur.com/v1wsGB7.jpeg" alt="Team Experts Group Photo" />
+    </div>
   </div>
-</section>
 
-<section class="certified-experts">
-  <h3>Certified & Trusted Experts</h3>
-  <img src="https://i.imgur.com/vn8Xc61.png" alt="Certified & Trusted Experts Badge" />
-  <br /><br />
-  <img src="https://i.imgur.com/VgfP0Wd.png" alt="Certification Document" style="max-width: 100%; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.2);" />
-</section>
+  <script>
+    // FAQ Toggle
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => item.classList.toggle('open'));
+    });
 
-<!-- (rest of your page continues untouched) -->
+    // Testimonial Carousel
+    const testimonials = [
+      '"Thanks to Crypto Asset Recovery, I got back over $12,000 I thought was gone forever. Quick and professional!" – Sarah M.',
+      '"Their team was responsive, supportive, and truly effective. Highly recommend them." – James K.',
+      '"I was scammed out of $370,000 in a fake ICO. These guys actually got it back. Incredible." – Robert T.',
+      '"After months of trying, they helped me recover $61,000 lost to a fake broker site. Game-changing service!" – Linda P.'
+    ];
+    let index = 0;
+    const testimonialEl = document.getElementById('testimonial-text');
+    function rotateTestimonial() {
+      testimonialEl.style.opacity = 0;
+      setTimeout(() => {
+        testimonialEl.textContent = testimonials[index];
+        testimonialEl.style.opacity = 1;
+        index = (index + 1) % testimonials.length;
+      }, 300);
+    }
+    rotateTestimonial();
+    setInterval(rotateTestimonial, 5000);
+
+    // Smooth scroll for nav links and buttons
+    document.getElementById('nav-services').addEventListener('click', e => {
+      e.preventDefault();
+      document.getElementById('what-we-do').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.getElementById('btn-get-help').addEventListener('click', () => {
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Modal open/close logic for team photo
+    const teamModal = document.getElementById('team-modal');
+    document.getElementById('open-team-modal').addEventListener('click', () => {
+      teamModal.style.display = 'flex';
+    });
+    document.getElementById('close-team-modal').addEventListener('click', () => {
+      teamModal.style.display = 'none';
+    });
+    window.addEventListener('click', e => {
+      if(e.target === teamModal) {
+        teamModal.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
